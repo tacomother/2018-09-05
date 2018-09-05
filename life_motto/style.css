@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2b303b;
+  color: #c0c5ce;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div > span {
+  display: block;
+}
+
+div > span:first-child {
+  color: gray;
+}
+
+div > span:nth-child(2) span:first-child {
+  color: #bf616a;
+}
+
+div > span:nth-child(2) span:last-child {
+  color: #a3be8c;
+}
+
+div > span:nth-child(3) span:first-child {
+  color: #96b5b4;
+  padding-left: 1em;
+}
+
+div > span:nth-child(3) span:last-child {
+  color: #96b5b4;
+}
+
+div > span:nth-child(4) span {
+  color: #96b5b4;
+  padding-left: 1em;
+}

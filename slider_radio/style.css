@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+input[type="radio"] {
+  display: none;
+}
+header {
+  background-color: #222;
+  height: 460px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+}
+header .img1,
+header .img2,
+header .img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: opacity 0.7s linear;
+  filter: grayscale(60%);
+}
+section {
+  margin-top: 460px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  height: 180px;
+}
+section .btnSel {
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  margin: -8px 0 0 0;
+  overflow: hidden;
+}
+section .btnSel .auswahl {
+  display: block;
+  background: url("http://andreasstorm.com/lib/nav.png") no-repeat;
+  height: 8px;
+  width: 21px;
+  background-size: 21px;
+  transition: all 0.6s ease-out;
+  box-shadow: 0 0 0 9999px #fff;
+}
+.sel {
+  padding: 30px 0px;
+}
+.sel label {
+  cursor: pointer;
+  width: 32%;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+  margin-right: 2%;
+  float: left;
+  text-align: center;
+  padding: 30px 0px;
+}
+.sel label[for="box3"] {
+  margin-right: 0%;
+}
+#box1:checked ~ header .img2,
+#box2:checked ~ header .img3,
+#box3:checked ~ header .img1,
+#box1:checked ~ header .img3,
+#box2:checked ~ header .img1,
+#box3:checked ~ header .img2 {
+  opacity: 0.6;
+}
+#box1:checked ~ section .auswahl {
+  margin-left: calc(16% - 10.5px);
+}
+#box2:checked ~ section .auswahl {
+  margin-left: calc(50% - 10.5px);
+}
+#box3:checked ~ section .auswahl {
+  margin-left: calc(84% - 10.5px);
+}
+#box1:checked ~ header .img1 {
+  background-image: url("https://31.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg");
+  opacity: 1;
+  filter: none;
+}
+#box2:checked ~ header .img2 {
+  background-image: url("https://31.media.tumblr.com/4d1f173744a32bb4b35a2d5d0babff74/tumblr_mnh29fxz111st5lhmo1_1280.jpg");
+  opacity: 1;
+  filter: none;
+}
+#box3:checked ~ header .img3 {
+  background-image: url("https://25.media.tumblr.com/a408ad9af259cf827ed4599d60bcb0a9/tumblr_myebwtELvb1st5lhmo1_1280.jpg");
+  opacity: 1;
+  filter: none;
+}

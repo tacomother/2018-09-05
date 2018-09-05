@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  transition: all 0.8s ease-in;
+}
+
+/* Grid */
+.main-container {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.calc-container {
+  display: grid;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.dot {
+  grid-column: span 2;
+}
+
+.equal {
+  grid-row: span 2;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  text-align: center;
+}
+
+/* Input */
+#input {
+  width: 100%;
+  padding-right: 10px;
+  font-size: 3rem;
+  text-align: right;
+  height: 2em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fdfefe;
+  background-color: #223850;
+  transition: all 0.3s ease-in;
+}
+
+/* Btn's */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.btn-num {
+  background-color: #223850;
+  color: #6885a7;
+}
+
+.btn-num:hover {
+  background-color: #233b55;
+}
+
+.btn-operator {
+  font-weight: bold;
+  background-color: #233b55;
+  color: #fdfefe;
+}
+
+#color-change {
+  position: fixed;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  font-size: 1rem;
+  margin: 1em;
+  transition: all 0.3 ease-in;
+  background-color: #223850;
+  color: #fdfefe;
+}
+
+#color-change:hover {
+  background-color: #fdfefe;
+  color: #233b55;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Color Modes */
+.white-bg {
+  background-color: #fdfefe !important;
+}
+.white-text {
+  color: #fdfefe !important;
+}
+.blue-bg {
+  background-color: #223850 !important;
+}
+.blue-text {
+  color: #223850 !important;
+}
+
+/* Queries */
+@media (max-width: 601px) {
+  #color-change {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 1em auto;
+  }
+
+  .btn {
+    padding: 1em;
+  }
+}

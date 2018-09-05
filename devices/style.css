@@ -1,0 +1,250 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1f1f1f;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.devices {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -327px;
+}
+
+/* MACBOOK */
+.laptop {
+  float: left;
+  animation-duration: 1s;
+  animation-name: bounceInDown;
+}
+
+.laptop .screen::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #a5adbd;
+  height: 4px;
+  width: 4px;
+  margin: 5px 0 0 138px;
+}
+
+.laptop .screen {
+  background: #fcfcfc;
+  border-radius: 15px 15px 0 0;
+  height: 185px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.laptop .screen::after {
+  content: "";
+  position: absolute;
+  background: #161b21;
+  height: 160px;
+  width: 254px;
+  border-radius: 2px;
+  margin: 14px 0 0 13px;
+}
+
+.laptop .keyboard::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 8px;
+  width: 370px;
+  margin: 7px 0 0 -10px;
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.laptop .keyboard {
+  background: #f4f5f7;
+  border-radius: 5px 5px 25px 25px;
+  height: 8px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.laptop .keyboard::after {
+  content: "";
+  position: absolute;
+  background: #d8dbe1;
+  height: 4px;
+  width: 50px;
+  margin: 0 0 0 150px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* IPAD */
+.ipad {
+  background: #fcfcfc;
+  border-radius: 10px;
+  height: 150px;
+  width: 120px;
+  margin: 20px 60px 0 0;
+  float: left;
+  animation-duration: 1s;
+  animation-name: bounceInLeft;
+}
+
+.ipad::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 8px;
+  width: 140px;
+  margin: 147px 0 0 -10px;
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.ipad .screen {
+  margin: 12px 0 0 10px;
+  background: #161b21;
+  border-radius: 2px;
+  height: 126px;
+  width: 100px;
+}
+
+.ipad .screen::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 4px;
+  width: 4px;
+  margin: -8px 0 0 48px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ipad .screen::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 129px 0 0 47px;
+  border-radius: 1px;
+  z-index: 1;
+}
+
+/* IPHONE */
+.iphone {
+  margin: 40px 0 0 60px;
+  background: #fcfcfc;
+  border-radius: 10px;
+  height: 110px;
+  width: 62px;
+  float: left;
+  animation-duration: 1s;
+  animation-name: bounceInRight;
+}
+
+.iphone::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 8px;
+  width: 70px;
+  margin: 106px 0 0 -4px;
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.iphone .screen {
+  margin: 13px 0 0 4px;
+  background: #161b21;
+  border-radius: 2px;
+  height: 84px;
+  width: 54px;
+}
+
+.iphone .screen::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  height: 3px;
+  width: 10px;
+  margin: -7px 0 0 23px;
+  z-index: -1;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.iphone .screen::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 87px 0 0 25px;
+  z-index: -1;
+  border-radius: 1px;
+  z-index: 1;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

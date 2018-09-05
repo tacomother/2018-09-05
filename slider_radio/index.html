@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider With Radio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <input type="radio" name="box" id="box1" checked>
+  <input type="radio" name="box" id="box2">
+  <input type="radio" name="box" id="box3">
+
+  <header>
+    <div class="img1"></div>
+    <div class="img2"></div>
+    <div class="img3"></div>
+    <div class="inner"></div>
+  </header>
+
+  <section>
+    <div class="btnSel">
+      <div class="inner">
+        <div class="auswahl"></div>
+      </div>
+    </div>
+    <div class="inner">
+      <form action="#">
+        <div class="sel">
+          <label for="box1">
+            1.
+          </label>
+          <label for="box2">
+            2.
+          </label>
+          <label for="box3">
+            3.
+          </label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    (function () {
+      setInterval((function () {
+        $("input").eq(($("input:checked").index() + 1) % 3).prop("checked", true);
+      }), 8000);
+    }).call(this);
+  </script>
+</body>
+
+</html>
